@@ -34,39 +34,32 @@
     });
   }
 
-  /* ---- Hero slider ---- */
-  (function heroSlider() {
-    var slides = Array.prototype.slice.call(document.querySelectorAll('.hero__slide'));
-    if (!slides.length) return;
-    var dotsWrap = document.getElementById('heroDots');
-    var curEl = document.getElementById('heroCur');
-    var prev = document.getElementById('heroPrev');
-    var next = document.getElementById('heroNext');
-    var i = 0, timer;
-
-    slides.forEach(function (_, idx) {
-      var b = document.createElement('button');
-      b.setAttribute('aria-label', 'Go to slide ' + (idx + 1));
-      if (idx === 0) b.classList.add('active');
-      b.addEventListener('click', function () { go(idx); reset(); });
-      dotsWrap.appendChild(b);
-    });
-    var dots = Array.prototype.slice.call(dotsWrap.children);
-
-    function go(n) {
-      slides[i].classList.remove('active');
-      dots[i].classList.remove('active');
-      i = (n + slides.length) % slides.length;
-      slides[i].classList.add('active');
-      dots[i].classList.add('active');
-      if (curEl) curEl.textContent = ('0' + (i + 1)).slice(-2);
-    }
-    function reset() { clearInterval(timer); timer = setInterval(function () { go(i + 1); }, 6500); }
-
-    if (prev) prev.addEventListener('click', function () { go(i - 1); reset(); });
-    if (next) next.addEventListener('click', function () { go(i + 1); reset(); });
-    reset();
+  /* ---- Hero background crossfade ---- */
+  (function heroBg() {
+    var imgs = Array.prototype.slice.call(document.querySelectorAll('.hero__bg img'));
+    if (imgs.length < 2) return;
+    var i = 0;
+    setInterval(function () {
+      imgs[i].classList.remove('active');
+      i = (i + 1) % imgs.length;
+      imgs[i].classList.add('active');
+    }, 6000);
   })();
+
+  /* ---- Hero lead form ---- */
+  var heroForm = document.getElementById('heroForm');
+  if (heroForm) {
+    heroForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = heroForm.querySelector('[name="name"]').value.trim();
+      var phone = heroForm.querySelector('[name="phone"]').value.trim();
+      var email = heroForm.querySelector('[name="email"]').value.trim();
+      if (!name || !phone || !email) { alert('Please add your name, phone and email so we can call you back.'); return; }
+      heroForm.style.display = 'none';
+      var s = document.getElementById('heroSuccess');
+      if (s) s.classList.add('show');
+    });
+  }
 
   /* ---- Horizontal card slider (services) ---- */
   function attachSlider(trackId, prevId, nextId) {
