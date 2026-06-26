@@ -37,16 +37,33 @@
   <div class="wrap">
     <a href="index.html" class="brand"><img src="assets/img/logo.svg" alt="Vato Style"></a>
     <nav class="nav">
+      <a href="#hero">Home</a>
       <a href="#intro">About</a>
-      <a href="#process">Process</a>
-      <a href="#craft">What We Craft</a>
-      <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#stories">Journal</a>
+      <div class="nav__item">
+        <span class="nav__toggle" tabindex="0" role="button" aria-haspopup="true">Services
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg>
+        </span>
+        <div class="dropdown">
+          <a href="quote.html">Bespoke Kitchens</a>
+          <a href="quote.html">Built-in Cupboards</a>
+          <a href="quote.html">Wrap Doors &amp; Panels</a>
+          <a href="quote.html">Counter Tops</a>
+          <a href="quote.html">Shopfitting</a>
+          <a href="quote.html">Custom Furniture</a>
+        </div>
+      </div>
+      <a href="#portfolio">Gallery</a>
+      <a href="#areas">Service Areas</a>
+      <a href="financing.html">Financing</a>
+      <a href="#stories">Blog</a>
+      <a href="quote.html">Contact</a>
     </nav>
     <div class="header__cta">
-      <a href="tel:+27123300122" class="btn btn--ghost btn--phone">Call Us</a>
-      <a href="quote.html" class="btn btn--lime btn--quote">Get a <span>Free&nbsp;</span>Quote</a>
+      <div class="avail">
+        <span class="avail__now"><span class="avail__dot"></span>We're Available Now</span>
+        <a href="tel:+27123300122" class="avail__phone">(012) 330 0122</a>
+      </div>
+      <a href="quote.html" class="btn btn--lime btn--quote">Get My <span>Free&nbsp;</span>Quote</a>
       <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -59,13 +76,22 @@
     <button class="drawer__close" id="drawerClose" aria-label="Close menu">&times;</button>
   </div>
   <nav>
+    <a href="#hero">Home</a>
     <a href="#intro">About</a>
-    <a href="#process">Process</a>
-    <a href="#craft">What We Craft</a>
-    <a href="#services">Services</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#stories">Journal</a>
-    <a href="quote.html">Get a Quote</a>
+    <span class="drawer__sublabel">Services</span>
+    <div class="drawer__sub">
+      <a href="quote.html">Bespoke Kitchens</a>
+      <a href="quote.html">Built-in Cupboards</a>
+      <a href="quote.html">Wrap Doors &amp; Panels</a>
+      <a href="quote.html">Counter Tops</a>
+      <a href="quote.html">Shopfitting</a>
+      <a href="quote.html">Custom Furniture</a>
+    </div>
+    <a href="#portfolio">Gallery</a>
+    <a href="#areas">Service Areas</a>
+    <a href="financing.html">Financing</a>
+    <a href="#stories">Blog</a>
+    <a href="quote.html">Contact</a>
   </nav>
   <div class="drawer__contact">
     Speak to a master joiner
@@ -250,7 +276,7 @@
         <div class="cat__body"><h3>Studies &amp; Offices</h3><p>Built-in desks, shelving and office joinery for working from home.</p><span class="cat__link">Enquire <span>→</span></span></div>
       </a>
     </div>
-    <div class="areas reveal">
+    <div class="areas reveal" id="areas">
       <span>Proudly serving</span>
       <a href="quote.html">Pretoria</a>
       <a href="quote.html">Centurion</a>
