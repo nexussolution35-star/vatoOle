@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 168" role="img" aria-label="Vato Style — joinery, board cut and edge, wrap doors">
+  <defs>
+    <style>
+      .vs-serif { font-family: Georgia, 'Times New Roman', serif; font-weight: 700; }
+      .vs-sans  { font-family: 'Figtree', Arial, sans-serif; font-weight: 600; }
+    </style>
+  </defs>
+  <!-- Lime block behind VATO -->
+  <rect x="0" y="0" width="352" height="120" fill="#8CC63E"/>
+  <!-- VATO (white) -->
+  <text x="24" y="96" class="vs-serif" font-size="104" fill="#ffffff" letter-spacing="-2">VATO</text>
+  <!-- STYLE (black) -->
+  <text x="360" y="96" class="vs-serif" font-size="104" fill="#111111" letter-spacing="-2">STYLE</text>
+  <!-- Tagline -->
+  <text x="6" y="150" class="vs-sans" font-size="30" fill="#222222" letter-spacing="1">joinery&#160;&#160;&#8226;&#160;&#160;board cut &amp; edge&#160;&#160;&#8226;&#160;&#160;wrap doors</text>
+</svg>
